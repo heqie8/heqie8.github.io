@@ -3,81 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>艰苦砺身 · 河沙见金</title>
+<title>徐庶 · 侠者之义</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  height:100vh;
-  background:#0a0f1a;
-  background:radial-gradient(circle at top right,#1a2035 0%,#0a0f1a 70%);
-  color:#e6e6e6;
-  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",serif;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
+html,body{width:100%;min-height:100vh;font-family:"PingFang SC","Microsoft YaHei",serif}
+
+/* 背景 */
+.bg{
+  position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
+  background:url(bg.jpg) center center / cover no-repeat;
+  filter:brightness(0.2) contrast(1.1);
 }
-.avatar{
-  width:120px;height:120px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#ffd700,#ffb300);
-  display:flex;align-items:center;justify-content:center;
-  font-size:48px;font-weight:bold;color:#111;
-  margin-bottom:30px;
-  box-shadow:0 0 40px rgba(255,215,0,0.25)
+
+/* 内容容器 */
+.container{
+  max-width:820px;margin:0 auto;padding:10vh 20px 12vh;
+  position:relative;z-index:1;color:#fff;text-align:center
 }
-h1{
-  font-size:46px;
-  font-weight:600;
-  margin-bottom:12px;
-  color:#fff
+
+/* 标题 */
+.title{
+  font-size:36px;letter-spacing:3px;color:#ffd700;margin-bottom:50px;
+  text-shadow:0 0 15px rgba(255,215,0,0.4)}
+
+/* 段落 */
+.line{
+  font-size:20px;line-height:2.4;margin-bottom:26px;opacity:0.9
 }
-.desc{
-  font-size:17px;color:#999;
-  margin-bottom:50px;
+
+/* 高亮金句 */
+.highlight{
+  font-size:26px;color:#ffd700;font-weight:500;
+  margin:50px 0;line-height:1.8;
+  text-shadow:0 0 12px rgba(255,215,0,0.5)
 }
-.verse{
-  font-size:28px;
-  font-weight:500;
-  line-height:2.0;
-  color:#ffd700;
-  letter-spacing:2px;
-  margin-bottom:50px;
-  text-shadow:0 0 15px rgba(255,215,0,0.3)
-}
-.links{
-  display:flex;gap:20px;justify-content:center;flex-wrap:wrap
-}
-.btn{
-  padding:14px 30px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,215,0,0.2);
-  color:#ffd700;
-  text-decoration:none;
-  transition:all 0.3s ease
-}
-.btn:hover{
-  background:#ffd700;
-  color:#000;
-  transform:translateY(-3px)
+
+/* 署名 */
+.sign{
+  text-align:right;font-size:18px;color:#ccc;margin-top:70px;opacity:0.8
 }
 </style>
 </head>
+
 <body>
-<div class="avatar">H</div>
-<h1>heqie8</h1>
-<p class="desc">潜心沉淀 · 终成大器</p>
-<div class="verse">
-  艰苦砺身为大任<br>
-  河沙淘尽始见金
-</div>
-<div class="links">
-  <a href="https://github.com/heqie8" class="btn">GitHub</a>
-  <a href="#" class="btn">博客</a>
-  <a href="#" class="btn">关于</a>
+<div class="bg"></div>
+<div class="container">
+  <div class="title">徐庶 · 侠者之义</div>
+
+  <div class="line">路见不平，拔刀相助，乃侠者之义也。</div>
+  <div class="line">大丈夫当行侠重义，仗剑天下。</div>
+  <div class="line">若除贪官恶吏，天下自为之一清。</div>
+  <div class="line">吾等当上体天心，下济黎民。</div>
+  <div class="line">天乃高且远，安可事事自下。</div>
+  <div class="line">以吾等之才，何不同辅一主，共成王霸之业。</div>
+  <div class="line">吾等并力同心相通，大事何不可成哉。</div>
+  <div class="line">百姓陷于苦海，而吾却难以济之。</div>
+  <div class="line">愿以手中长剑，荡尽天下魍魉。</div>
+  <div class="line">吾为侠也，不愧持正之心，不负三尺之剑。</div>
+  <div class="line">君人者欲安，莫若以民为本，平政爱之。</div>
+  <div class="line">君无民臣，何以名君？故知民之重也。</div>
+  <div class="line">民惟邦本，本固邦宁，奈何知而不行？</div>
+  <div class="line">终有一鸣惊高阙，君何孤愤使面沉。</div>
+
+  <div class="highlight">
+    艰苦砺身为大任<br>
+    河沙淘尽始见金
+  </div>
+
+  <div class="line">不可同辅黄叔，实为平生大憾。</div>
+  <div class="sign">— heqie8 记</div>
 </div>
 </body>
 </html>
