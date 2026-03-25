@@ -4,144 +4,124 @@
 <meta charset="UTF-8">
 <title>徐庶 · 侠者之义</title>
 <style>
-/* 全局：无滚动条干扰、全屏显示 */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
   font-family: "Microsoft YaHei", serif;
 }
 
-/* 核心容器：图片全屏 + 文字叠加 */
+/* 关键修复：让图片完整显示，不裁切，显示头部 */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("bg.jpg") center center;
-  background-size: cover;
-  /* 亮度拉满，极速加载 */
+  background: url("bg.jpg") top center; /* 这里修复：top = 从头部开始显示 */
+  background-size: 100% auto; /* 完整显示整张图，不拉伸 */
+  background-repeat: no-repeat;
   filter: brightness(1.3) contrast(1.08);
 }
 
-/* 文字叠加层（不影响图片） */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.25); /* 轻微遮罩让文字更清晰 */
+  background: rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-/* —————————— 文字分组定位（按意境摆放） —————————— */
 .text-group {
   position: absolute;
   z-index: 2;
   color: #fff;
-  text-shadow: 0 0 12px rgba(0,0,0,0.7);
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
   font-weight: 500;
 }
 
-/* 1. 顶部大标题 */
 .title {
-  top: 8%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 42px;
-  letter-spacing: 3px;
+  font-size: 36px;
+  letter-spacing: 2px;
 }
 
-/* 2. 左上：侠者核心义 */
 .top-left {
-  top: 22%;
+  top: 18%;
   left: 5%;
-  font-size: 20px;
-  line-height: 2.2;
+  font-size: 18px;
+  line-height: 2;
 }
 
-/* 3. 右上：天下抱负 */
 .top-right {
-  top: 22%;
+  top: 18%;
   right: 5%;
-  font-size: 20px;
-  line-height: 2.2;
+  font-size: 18px;
+  line-height: 2;
   text-align: right;
 }
 
-/* 4. 中间：为民之心 */
 .middle {
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 22px;
-  line-height: 2.4;
+  font-size: 20px;
+  line-height: 2.2;
   text-align: center;
 }
 
-/* 5. 左下：砺志金言 */
 .bottom-left {
-  bottom: 18%;
+  bottom: 15%;
   left: 5%;
-  font-size: 20px;
-  line-height: 2.2;
+  font-size: 18px;
+  line-height: 2;
 }
 
-/* 6. 右下：署名 + 憾言 */
 .bottom-right {
-  bottom: 18%;
+  bottom: 15%;
   right: 5%;
-  font-size: 20px;
-  line-height: 2.2;
+  font-size: 18px;
+  line-height: 2;
   text-align: right;
 }
 </style>
 </head>
 
 <body>
-  <!-- 全屏背景图：本地 bg.jpg 秒加载 -->
   <div class="hero">
     <div class="overlay"></div>
 
-    <!-- 标题 -->
     <div class="text-group title">徐庶 · 侠者之义</div>
 
-    <!-- 左上：侠者之义 -->
     <div class="text-group top-left">
       路见不平，拔刀相助，乃侠者之义也。<br>
       大丈夫当行侠重义，仗剑天下。<br>
-      愿以手中长剑，荡尽天下魍魉。<br>
-      吾为侠也，不愧持正之心，不负三尺之剑。
+      愿以手中长剑，荡尽天下魍魉。
     </div>
 
-    <!-- 右上：王霸之业 -->
     <div class="text-group top-right">
       若除贪官恶吏，天下自为之一清。<br>
       吾等当上体天心，下济黎民。<br>
-      以吾等之才，何不同辅一主，共成王霸之业。<br>
-      吾等并力同心相通，大事何不可成哉。
+      吾为侠也，不愧持正之心，不负三尺之剑。
     </div>
 
-    <!-- 中间：为民为本 -->
     <div class="text-group middle">
       君人者欲安，莫若以民为本，平政爱之。<br>
       君无民臣，何以名君？故知民之重也。<br>
-      民惟邦本，本固邦宁，奈何知而不行？<br>
-      百姓陷于苦海，而吾却难以济之。
+      民惟邦本，本固邦宁，奈何知而不行？
     </div>
 
-    <!-- 左下：砺志之言 -->
     <div class="text-group bottom-left">
       艰苦砺身为大任<br>
       河沙淘尽始见金<br>
       终有一鸣惊高阙，君何孤愤使面沉。
     </div>
 
-    <!-- 右下：生平憾言 -->
     <div class="text-group bottom-right">
-      不可同辅黄叔，实为平生大憾。<br><br>
+      不可同辅皇叔，实为平生大憾。<br><br>
       — heqie8
     </div>
   </div>
